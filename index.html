@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- PyScript -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Sign Up - Twisted Spellbound Tournament</title>
+</head>
+<style>
+    body {
+        background-image: url('bg.jpg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    
+    #account {
+        background-color: rgba(80, 62, 85, 0.651)
+    }
+    
+    h3, h6{
+        font-family: DM Serif Display;
+        color: rgb(231, 216, 243);
+    }
+
+    form {
+        font-family: Raleway;
+    }
+
+    #signup {
+        color: rgb(231, 216, 243);
+        background-color: rgba(180, 105, 214, 0.801);
+    }
+
+    #output {
+        font-family: Raleway;
+        color: rgb(231, 216, 243)
+    }
+</style>
+<body class="d-flex justify-content-center align-items-center vh-100">
+    <div class="card p-4" id="account" style="width: 350px;">
+        <h3 class="text-center mb-4">Create an account to join the Tournament!</h3>
+        
+        <form>
+        <h6 class="text mb-4">Account details</h6>
+            <div class="mb-3">
+                <input type="text" id="username" class="form-control" placeholder="Username">
+            </div>
+
+            <div class="mb-3">
+                <input type="password" id="password" class="form-control" placeholder="Password">
+            </div>
+            <br>
+        <h6 class="text mb-4">Profile information</h6>
+            <div class="mb-3">
+                <input type="text" id="firstname" class="form-control" placeholder="First Name">
+            </div>
+
+            <div class="mb-3">
+                <input type="text" id="lastname" class="form-control" placeholder="Last Name">
+            </div>
+
+            <div class="mb-3">
+                <select id="age"  style="width: 100%; padding: 5px; border-radius: 5px; border-color: rgba(0, 0, 0, 0.144); color: rgba(0, 0, 0, 0.685);">
+                    <option value="">Age</option>
+                    <option value="eleven">11</option>
+                    <option value="twelve">12</option>
+                    <option value="thirteen">13</option>
+                    <option value="fourteen">14</option>
+                    <option value="fifteen">15</option>
+                    <option value="sixteen">16</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <select id="gender" style="width: 100%; padding: 5px; border-radius: 5px; border-color: rgba(0, 0, 0, 0.144); color: rgba(0, 0, 0, 0.699);"">
+                    <option value="">Gender</option>
+                    <option value="female">Female</option>
+                    <option value="male">Male</option>
+                    <option value="other">Other - e.g. Non-binary, Genderfluid</option>
+                    <option value="pnts">Prefer not to say</option>
+                </select>
+            </div>
+            <br>
+
+            <div class="d-grid">
+                <input type="button" py-click="account_creation" value="Sign up" class="btn btn-signup" id="signup">
+            </div>
+        
+        </form>
+
+        <div id="output" class="mt-3 text-center"></div>
+    </div>
+
+    <py-script src="main.py"></py-script>
+</body>
+</html>
